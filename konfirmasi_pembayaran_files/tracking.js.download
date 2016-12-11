@@ -1,0 +1,53 @@
+/**
+ * Version 1.0 Copyright 2011, Priceza.com Date: 14 Feb 2011
+ */
+var PZ = PZ || function() {
+};
+PZ.prototype.track = function(p) {
+	
+	if(!v(window,p)) return;
+	
+	var c = new Date().getTime();
+	var r = "";
+	r = "c=" + c;
+	r = r + ((p.type == undefined) ? "" : "&t=" + p.type);
+	r = r + ((p.merchantId == undefined) ? "" : "&m=" + p.merchantId);
+	r = r + ((p.productId == undefined) ? "" : "&p=" + p.productId);
+	r = r + ((p.value == undefined) ? "" : "&v=" + p.value);
+	r = r + ((p.filter == undefined) ? "" : "&f=" + p.filter);
+	r = r + ((p.data == undefined) ? "" : "&d=" + p.data);
+	r = r + "&u=" + encodeURIComponent(window.location.href);
+	var pf = '<iframe id="priceza_cframe_id" name="priceza_conversion_frame" width="0" height="0" '
+			+ 'src="'
+			+ g(window)
+			+ '//www.priceza.co.id/tracker?'
+			+ r
+			+ '"'
+			+ 'frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>';
+	
+	if(document.getElementById('priceza_cframe_id') === null) {
+		document.write(pf);
+	}
+	
+};
+var PRICEZA = new PZ();
+function g(a) {
+	if (a && a.location && a.location.protocol
+			&& a.location.protocol.toString().toLowerCase() == "https:")
+		return "https:";
+	return "http:";
+};
+function v(a,b) {
+	if(b && b.merchantId && b.type){
+		var mId = parseInt(b.merchantId);
+		if( !isNaN(b.merchantId) && ((parseFloat(b.merchantId) == mId) && mId > 0 && mId <= 2147483647)){
+			if (a && a.location.href){
+				var valid = new RegExp("(//(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))|(//localhost)");
+				if(valid.test(a.location.href.toString().toLowerCase())) 
+					return false;
+			}
+			return true;
+		}
+	}
+	return false;
+};
