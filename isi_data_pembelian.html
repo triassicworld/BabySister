@@ -214,10 +214,10 @@ Data Anda selalu rahasia dan hanya akan kami beritahukan kepada pelapak.
 <div class="js-quick-buy-fields quick-buy-fields">
 <input id="js-iv-email-conf" type="hidden" name="payment_invoice[buyer_attributes][email_confirmation]" value="baby@sister.com">
 <fieldset class="form-field-item">
-<dl class="string required payment_invoice_buyer_name"><dt><label class="string required control-label" for="js-iv-buyer-name"><abbr title="required">*</abbr> Nama Pembeli</label></dt><dd><input autocomplete="off" pattern="[a-zA-Z0-9 ]+" maxlength="30" class="string required" id="js-iv-buyer-name" placeholder="Nama Pembeli" size="30" type="text" name="payment_invoice[buyer_attributes][name]"></dd></dl>
+<dl class="string required payment_invoice_buyer_name"><dt><label class="string required control-label" for="js-iv-buyer-name"><abbr title="required">*</abbr> Nama Pembeli</label></dt><dd><input autocomplete="off" pattern="[a-zA-Z0-9 ]+" maxlength="30" class="string required" id="js-iv-buyer-name" value="Baby Sister" size="30" type="text" name="payment_invoice[buyer_attributes][name]"></dd></dl>
 </fieldset>
 <fieldset class="form-field-item quick-buy__email">
-<dl class="email required payment_invoice_buyer_email"><dt><label class="email required control-label" for="js-iv-email"><abbr title="required">*</abbr> E-mail Pembeli</label></dt><dd><input class="string email required js-validator-email" id="js-iv-email" data-guest-email-path="/guest_email" placeholder="E-mail Pembeli" type="email" name="payment_invoice[buyer_attributes][email]"><span class="label">Pastikan e-mail yang Anda tuliskan valid. <a href="https://www.bukalapak.com/payment/purchases/new?product_id=240587027&amp;seller_ids=%5B10536540%5D#" class="label-tips tooltipstered">?</a></span></dd></dl>
+<dl class="email required payment_invoice_buyer_email"><dt><label class="email required control-label" for="js-iv-email"><abbr title="required">*</abbr> E-mail Pembeli</label></dt><dd><input class="string email required js-validator-email" id="js-iv-email" data-guest-email-path="/guest_email" value="baby@sister.com" type="email" name="payment_invoice[buyer_attributes][email]"><span class="label">Pastikan e-mail yang Anda tuliskan valid. <a href="https://www.bukalapak.com/payment/purchases/new?product_id=240587027&amp;seller_ids=%5B10536540%5D#" class="label-tips tooltipstered">?</a></span></dd></dl>
 </fieldset>
 <div class="box-validation js-qb-email-review-toggle" style="display: block;">
 <div>
@@ -231,7 +231,7 @@ Pastikan e-mail Anda valid,
 </div>
 </div>
 <fieldset class="form-field-item">
-<dl class="tel optional payment_invoice_phone"><dt><label class="tel optional control-label" for="js-iv-phone">Telepon/Handphone</label></dt><dd><input type="tel" autocomplete="off" minlength="6" maxlength="13" class="string tel optional force-number-input js-convert-qb-phone" id="js-iv-phone" name="payment_invoice[buyer_attributes][phone]" placeholder="Telepon/Handphone" size="13"></dd></dl>
+<dl class="tel optional payment_invoice_phone"><dt><label class="tel optional control-label" for="js-iv-phone">Telepon/Handphone</label></dt><dd><input type="tel" autocomplete="off" minlength="6" maxlength="13" class="string tel optional force-number-input js-convert-qb-phone" id="js-iv-phone" name="payment_invoice[buyer_attributes][phone]" value="081234567890" size="13"></dd></dl>
 </fieldset>
 
 <input type="hidden" name="ab_simplify_address" id="ab_simplify_address" value="normal">
@@ -1145,7 +1145,7 @@ Kami menerima pembayaran melalui Kredivo.
 </dl>
 <dl class="active">
 <dt>
-Biaya Kirim
+Biaya Kirim:
 </dt>
 <dd>
 <div class="js-list-item--item js-iv-review__shipping__fee">Rp145.440</div>
@@ -1190,19 +1190,26 @@ Biaya Kirim
 </div>
 </dd>
 </dl>
-<dl class="js-iv-review__voucher">
-<dt>Voucher</dt>
+<dl class="js-iv-review__voucher active">
+<dt>Kode Voucher:</dt>
 <dd>
-<div class="js-list-item--item js-iv-review__voucher-value price--min">-</div>
-<div class="js-list-item--preloader hidden">
-<div class="list-item__loading"></div>
+<div class="js-list-item--item js-iv-review__voucher-value price--min"></div>
+<table style="width:100%">
+  <tr>
+    <th><input id="kode-voucher" type="text" placeholder="Masukkan kode voucher di sini"></th>
+    <th><div class="btn btn--red btn--medium btn--block" data-disabled="false" data-pending-payable="new" id="submit-kode-voucher">Terapkan</div></th>
+  </tr>
+</table>
+<div class="active">
+<div class="list-item__loading">
+</div>
 </div>
 </dd>
 </dl>
-<dl class="js-iv-review__nego">
-<dt>Potongan Negosiasi</dt>
+<dl class="js-iv-review__nego active">
+<dt>Potongan Harga dari Voucher:</dt>
 <dd>
-<div class="js-list-item--item js-iv-review__nego-value price--min">-</div>
+<div class="js-list-item--item js-iv-review__nego-value">Rp0</div>
 <div class="js-list-item--preloader hidden">
 <div class="list-item__loading"></div>
 </div>
