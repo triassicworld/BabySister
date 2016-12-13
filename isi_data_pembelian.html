@@ -219,7 +219,7 @@ Data Anda selalu rahasia dan hanya akan kami beritahukan kepada pelapak.
 <fieldset class="form-field-item quick-buy__email">
 <dl class="email required payment_invoice_buyer_email"><dt><label class="email required control-label" for="js-iv-email"><abbr title="required">*</abbr> E-mail Pembeli</label></dt><dd><input class="string email required js-validator-email" id="js-iv-email" data-guest-email-path="/guest_email" value="baby@sister.com" type="email" name="payment_invoice[buyer_attributes][email]"><span class="label">Pastikan e-mail yang Anda tuliskan valid. <a href="https://www.bukalapak.com/payment/purchases/new?product_id=240587027&amp;seller_ids=%5B10536540%5D#" class="label-tips tooltipstered">?</a></span></dd></dl>
 </fieldset>
-<div class="box-validation js-qb-email-review-toggle" style="display: block;">
+<div class="box-validation js-qb-email-review-toggle" style="display: hidden;">
 <div>
 E-mail Pembeli
 </div>
@@ -1231,7 +1231,11 @@ Biaya Kirim:
 <div class="is-hidden js-iv-review--content__raw-price js-promo-payment__discounted-payment" data-discounted-payment="[]" data-payment-channel="{&quot;deposit&quot;:{&quot;max_trx&quot;:{&quot;available_deposit&quot;:0}},&quot;credit_card&quot;:{&quot;min_trx&quot;:10000,&quot;fixed_fee&quot;:0,&quot;percentage_fee&quot;:1.5},&quot;pickup_cash&quot;:{&quot;min_trx&quot;:10000},&quot;bca_klikpay&quot;:{&quot;min_trx&quot;:10000,&quot;max_trx&quot;:100000000,&quot;fixed_fee&quot;:0,&quot;percentage_fee&quot;:0.0},&quot;mandiri_clickpay&quot;:{&quot;fixed_fee&quot;:0},&quot;mandiri_ecash&quot;:{&quot;max_trx&quot;:10000000,&quot;percentage_fee&quot;:0.0},&quot;cimb_clicks&quot;:{&quot;min_trx&quot;:10000,&quot;fixed_fee&quot;:0},&quot;indomaret&quot;:{&quot;max_trx&quot;:5000000},&quot;alfamart&quot;:{&quot;max_trx&quot;:5000000},&quot;kredivo&quot;:{&quot;max_trx&quot;:20000000,&quot;percentage_fee&quot;:1.25}}"></div>
 <div class="js-encourage-deposit-normal">
 <br>
-<div class="btn btn--red btn--large btn--block" data-disabled="false" data-pending-payable="new" id="js-purchase-next">Pilih Metode Pembayaran</div>
+<div>
+<form action="./metode_pembayaran.html">
+<input type="submit" class="btn btn--red btn--large btn--block" value="Pilih Metode Pembayaran" style="width: 100%">
+</form>
+</div>
 </div>
 <div class="hidden js-purchase-wrapper">
 <br>
