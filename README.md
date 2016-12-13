@@ -32,5 +32,4 @@ Alur untuk mencoba mockup:
 
 4. konfirmasi pembayaran
 
-5. tagihan"# babysister" 
-"# BabySister" 
+5. tagihan pembayaran 
