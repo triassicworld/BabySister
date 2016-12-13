@@ -468,9 +468,20 @@ seperti GO-JEK GO-SEND.
 <label>Jasa Pengiriman</label>
 </dt>
 <dd class="">
+
 <div class="js-purchase-courier purchase-courier-input">
-<select selected="selected" id="js-iv-courier-10536540" class="select optional js-filter-chzn js-iv-courier chzn-done" include_blank="true" placeholder="Pilih Jasa Pengiriman" name="payment_invoice[transactions_attributes][0][courier]" style="display: none;"><option data-trx="{&quot;service_key&quot;:&quot;pos_express_next_day_service&quot;,&quot;shipping&quot;:145440,&quot;insurance&quot;:8580,&quot;service&quot;:&quot;Pos Express Next Day Service&quot;,&quot;courier&quot;:&quot;pos_kilat&quot;,&quot;courier_name&quot;:&quot;Pos Kilat&quot;,&quot;eta&quot;:1}" data-pre-id="10536540" value="Pos Express Next Day Service">Pos Express Next Day Service (1 hari kerja) - Rp145.440</option><option data-trx="{&quot;service_key&quot;:&quot;tiki_reg&quot;,&quot;shipping&quot;:62000,&quot;insurance&quot;:11500,&quot;service&quot;:&quot;TIKI Reg&quot;,&quot;courier&quot;:&quot;tiki&quot;,&quot;courier_name&quot;:&quot;TIKI&quot;,&quot;eta&quot;:3}" data-pre-id="10536540" value="TIKI Reg">TIKI Reg (3 hari kerja) - Rp62.000</option><option data-trx="{&quot;service_key&quot;:&quot;jne_reg&quot;,&quot;shipping&quot;:72000,&quot;insurance&quot;:11500,&quot;service&quot;:&quot;JNE REG&quot;,&quot;courier&quot;:&quot;jne&quot;,&quot;courier_name&quot;:&quot;JNE&quot;,&quot;eta&quot;:3}" data-pre-id="10536540" value="JNE REG">JNE REG (3 hari kerja) - Rp72.000</option><option data-trx="{&quot;service_key&quot;:&quot;jne_yes&quot;,&quot;shipping&quot;:144000,&quot;insurance&quot;:11500,&quot;service&quot;:&quot;JNE YES&quot;,&quot;courier&quot;:&quot;jne&quot;,&quot;courier_name&quot;:&quot;JNE&quot;,&quot;eta&quot;:1}" data-pre-id="10536540" value="JNE YES">JNE YES (1 hari kerja) - Rp144.000</option></select><div id="js_iv_courier_10536540_chzn" class="chzn-container chzn-container-single" style="width: 602px;" title=""><a href="javascript:void(0)" class="chzn-single" tabindex="-1"><span class="chzn--bold">Pos Express Next Day Service (1 hari kerja) - Rp145.440</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off"></div><ul class="chzn-results"><li id="js_iv_courier_10536540_chzn_o_0" class="active-result result-selected chzn-courier chzn-courier--pos" style="">Pos Express Next Day Service (1 hari kerja) - Rp145.440</li><li id="js_iv_courier_10536540_chzn_o_1" class="active-result chzn-courier chzn-courier--tiki" style="">TIKI Reg (3 hari kerja) - Rp62.000</li><li id="js_iv_courier_10536540_chzn_o_2" class="active-result chzn-courier chzn-courier--jne" style="">JNE REG (3 hari kerja) - Rp72.000</li><li id="js_iv_courier_10536540_chzn_o_3" class="active-result chzn-courier chzn-courier--jne" style="">JNE YES (1 hari kerja) - Rp144.000</li></ul></div></div>
+
+<select>
+  <option value="pos express">Pos Express Next Day Service (1 hari kerja) - Rp145.440</option>
+  <option value="gojek">GOJEK (Maksimal 24 jam) - Rp80.000</option>
+  <option value="tiki 3">TIKI Reg (3 hari kerja) - Rp62.000</option>
+  <option value="jne 3">JNE REG (3 hari kerja) - Rp72.000</option>
+  <option value="jne 1">JNE YES (1 hari kerja) - Rp144.000</option>
+</select>
+
 </div>
+
+
 <div class="notif-highlight hidden" id="js-iv-courier-notif-gojek-10536540"></div>
 
 <div class="invoice-trx__insurance">
