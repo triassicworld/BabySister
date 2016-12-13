@@ -1228,7 +1228,15 @@ Biaya Kirim:
 <table style="width:100%">
   <tr>
     <th><input id="kode-voucher" type="text" placeholder="Masukkan kode voucher di sini"></th>
-    <th><div class="btn btn--red btn--medium btn--block" data-disabled="false" data-pending-payable="new" id="submit-kode-voucher">Terapkan</div></th>
+    <script>
+       function voucherClick()
+       {
+        var inputVoucher = document.getElementById('kode-voucher');
+        document.getElementById('display-voucher').text = 'Rp500.000';
+        document.getElementById('total-harga').text = 'Rp2.750.000';
+       } 
+    </script>
+    <th><a class="btn btn--red btn--medium btn--block" data-disabled="false" data-pending-payable="new" id="submit-kode-voucher" onclick="return voucherClick();">Terapkan</a></th>    
   </tr>
 </table>
 <div class="active">
@@ -1240,7 +1248,7 @@ Biaya Kirim:
 <dl class="js-iv-review__nego active">
 <dt>Potongan Harga dari Voucher:</dt>
 <dd>
-<div class="js-list-item--item js-iv-review__nego-value">Rp0</div>
+<div class="js-list-item--item js-iv-review__nego-value" id="display-voucher">Rp0</div>
 <div class="js-list-item--preloader hidden">
 <div class="list-item__loading"></div>
 </div>
@@ -1252,7 +1260,7 @@ Biaya Kirim:
 <strong>TOTAL BELANJA:</strong>
 </dt>
 <dd>
-<span class="order-review__total-fee--amount js-list-item--item js-iv-review__total">Rp3.404.020</span>
+<span class="order-review__total-fee--amount js-list-item--item js-iv-review__total" id="total-harga">Rp3.404.020</span>
 <div class="js-list-item--preloader hidden">
 <div class="list-item__loading"></div>
 </div>
