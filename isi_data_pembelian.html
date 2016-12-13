@@ -97,6 +97,9 @@ googletag.cmd = googletag.cmd || [];
 <div class="js-flash-container">
 </div>
 
+<style>
+.js-qb-email-review-toggle { display: none !important; }
+</style>
 <header>
 <div class="container-grid">
 <h3>
@@ -182,7 +185,7 @@ Atau
 </div>
 <div class="transaction-begin">
 <ul class="transaction__type-chooser">
-<li class="js-quick-buy tab-toggle transaction-type__toggle active">
+<!-- <li class="js-quick-buy tab-toggle transaction-type__toggle active">
 <a class="tab-toggle__link" href="https://www.bukalapak.com/payment/purchases/new?product_id=240587027&amp;seller_ids=%5B10536540%5D#quick-buy">
 Beli Tanpa Daftar
 </a>
@@ -191,7 +194,7 @@ Beli Tanpa Daftar
 <a class="tab-toggle__link" href="https://www.bukalapak.com/payment/purchases/new?product_id=240587027&amp;seller_ids=%5B10536540%5D#transaction-login">
 Login
 </a>
-</li>
+</li> -->
 </ul>
 
 <div class="transaction__action" id="transaction-login">
@@ -219,7 +222,7 @@ Data Anda selalu rahasia dan hanya akan kami beritahukan kepada pelapak.
 <fieldset class="form-field-item quick-buy__email">
 <dl class="email required payment_invoice_buyer_email"><dt><label class="email required control-label" for="js-iv-email"><abbr title="required">*</abbr> E-mail Pembeli</label></dt><dd><input class="string email required js-validator-email" id="js-iv-email" data-guest-email-path="/guest_email" value="baby@sister.com" type="email" name="payment_invoice[buyer_attributes][email]"><span class="label">Pastikan e-mail yang Anda tuliskan valid. <a href="https://www.bukalapak.com/payment/purchases/new?product_id=240587027&amp;seller_ids=%5B10536540%5D#" class="label-tips tooltipstered">?</a></span></dd></dl>
 </fieldset>
-<div class="box-validation js-qb-email-review-toggle" style="display: hidden;">
+<div class="box-validation js-qb-email-review-toggle" style="display: none !important;">
 <div>
 E-mail Pembeli
 </div>
